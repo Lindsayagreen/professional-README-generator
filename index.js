@@ -53,40 +53,71 @@ const questions = [
   },
 ];
 
-inquirer.prompt(questions).then((answers) => {
-  const filename = `${answers.projectName
-    .toLowerCase()
-    .split(" ")
-    .join("")}.json`;
+function init() {
+  inquirer.prompt(questions).then((answers) => {
+    const readmeContent = generateREADME(answers);
+    const filename = "README.md";
 
-  fs.writeFile(filename, JSON.stringify(answers), (err) => {
+    fs.writeFile(filename, readmeContent, (err) => {
     err ? console.error(err) : console.log("README.md generated successfully!");
+    });
   });
-});
+}
 
 function generateREADME(answers) {
   return `
   # ${answers.title}
+  
   ## Description
   ${answers.description}
+  
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
+  - [Test Instructions](#test-instructions)
   - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
   - [Questions](#questions)
+  
   ## Installation
   ${answers.installation}
+  
   ## Usage
   ${answers.usage}
+  
+  ## Test Instructions
+  ${answers.test}
+  
   ## License
   This project is licensed under the ${answers.license} license.
-  ## Contributing
-  ${answers.contributing}
-  ## Tests
-  ${answers.tests}
+  
   ## Questions
-  For additional questions, you can reach me at [${answers.email}](mailto:${answers.email}). You can also find me on [GitHub](https://github.com/${answers.github}).
+  You can find me on GitHub: [${answers.github}](https://github.com/${answers.github})
+  
+  For any questions or inquiries, please email me at ${answers.email}.
   `;
 }
+
+
+init();
+
+
+
+
+
+
+
+// function init () {
+// inquirer
+// .prompt(questions)
+
+// .then((answers) => {
+//   const readMeFile = `${answers.readMeFile
+//     .toLowerCase()
+//     .split(" ")
+//     .join("")}.json`;
+
+//   fs.writeFile(readMeFile, JSON.stringify(answers), (err) => {
+//     err ? console.error(err) : console.log("README.md generated successfully!");
+//   });
+// });
+// }
