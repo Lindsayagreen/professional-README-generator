@@ -38,15 +38,4 @@ function generateMarkdown(answers) {
   `;
 }
 
-function init() {
-  inquirer.prompt(questions).then((answers) => {
-    const readmeContent = generateREADME(answers);
-    const filename = "README.md";
-
-    fs.writeFile(filename, readmeContent, (err) => {
-    err ? console.error(err) : console.log("README.md generated successfully!");
-    });
-  });
-}
-
 module.exports = generateMarkdown;
