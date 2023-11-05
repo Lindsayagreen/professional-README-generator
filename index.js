@@ -1,14 +1,7 @@
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();
 const inquirer = require("inquirer");
 const fs = require("fs");
-// const generateMarkdown = require('./generateMarkdown');
+const generateMarkdown = require('./generateMarkdown');
 
 const questions = [
   {
@@ -54,71 +47,20 @@ const questions = [
   },
 ];
 
+function writeToFile(fileName, data) { 
+  fs.writeFile(fileName, data, (err) => console.log(err))
+}
+
 function init() {
-  inquirer.prompt(questions).then((answers) => {
-    const readmeContent = generateREADME(answers);
-    const filename = "README.md";
+  inquirer
+  .prompt(questions)
+  .then((data) =>{
+      writeToFile('My-ReadME.md', generateMarkdown(data))
+  }
 
-    fs.writeFile(filename, readmeContent, (err) => {
-    err ? console.error(err) : console.log("README.md generated successfully!");
-    });
-  });
-}
-
-function generateREADME(answers) {
-  return `
-  # ${answers.title}
+  )
+  .catch(err => console.log(err))
+};
   
-  ## Description
-  ${answers.description}
-  
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Test Instructions](#test-instructions)
-  - [License](#license)
-  - [Questions](#questions)
-  
-  ## Installation
-  ${answers.installation}
-  
-  ## Usage
-  ${answers.usage}
-  
-  ## Test Instructions
-  ${answers.test}
-  
-  ## License
-  This project is licensed under the ${answers.license} license.
-  
-  ## Questions
-  You can find me on GitHub: [${answers.github}](https://github.com/${answers.github})
-  
-  For any questions or inquiries, please email me at ${answers.email}.
-  `;
-}
-
 
 init();
-
-
-
-
-
-
-
-// function init () {
-// inquirer
-// .prompt(questions)
-
-// .then((answers) => {
-//   const readMeFile = `${answers.readMeFile
-//     .toLowerCase()
-//     .split(" ")
-//     .join("")}.json`;
-
-//   fs.writeFile(readMeFile, JSON.stringify(answers), (err) => {
-//     err ? console.error(err) : console.log("README.md generated successfully!");
-//   });
-// });
-// }

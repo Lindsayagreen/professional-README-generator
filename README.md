@@ -2,7 +2,7 @@
   # cats
   
   ## Description
-  all about cats
+  cats
   
   ## Table of Contents
   - [Installation](#installation)
@@ -12,13 +12,13 @@
   - [Questions](#questions)
   
   ## Installation
-  file
+  cats
   
   ## Usage
-  friedly
+  cats
   
   ## Test Instructions
-  great
+  cat
   
   ## License
   This project is licensed under the MIT license.

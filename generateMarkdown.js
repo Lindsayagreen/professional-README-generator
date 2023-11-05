@@ -1,21 +1,49 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+
+function renderLicenseBadge(license) {
+  if (license === 'MIT') {
+    return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]';
+  } else if (license === 'Apache 2.0') {
+    return '[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]';
+  } else if (license === 'GPL 3.0') {
+    return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]';
+  } else if (license === 'BSD 3-Clause') {
+    return '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]';
+  } else {
+    return '';
+  }
+};
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  if (license === 'MIT') {
+    return '';
+  } else {
+    return `(https://opensource.org/licenses/${license})`
+  }
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(answers) {
+function renderLicenseSection(license) {
+  if (license === "MIT") {
+    return '';
+  } else {
+    return `${renderLicenseBadge(license)}${renderLicenseLink(license)}`;
+  }
+}
+
+
+function generateMarkdown(data) {
   return `
-  # ${answers.title}
+  ## ${data.title}
+  
   ## Description
-  ${answers.description}
+  ${data.description}
+  
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
@@ -23,19 +51,30 @@ function generateMarkdown(answers) {
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
+  
   ## Installation
-  ${answers.installation}
+  ${data.installation}
+  
   ## Usage
-  ${answers.usage}
+  ${data.usage}
+  
   ## License
-  This project is licensed under the ${answers.license} license.
+  This project is licensed under the ${data.license} license.
+  ${renderLicenseBadge(data.license)}   <!-- Include the badge here -->
+  ${renderLicenseSection(data.license)}  <!-- Include the license link here -->
+  
   ## Contributing
-  ${answers.contributing}
+  ${data.contributing}
+  
   ## Tests
-  ${answers.tests}
+  ${data.tests}
+  
   ## Questions
-  For additional questions, you can reach me at [${answers.email}](mailto:${answers.email}). You can also find me on [GitHub](https://github.com/${answers.github}).
+  My email [${data.email}](mailto:${data.email}). You can also find me on [GitHub](https://github.com/${data.github}).
   `;
 }
 
+
+
 module.exports = generateMarkdown;
+
