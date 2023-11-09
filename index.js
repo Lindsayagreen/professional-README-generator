@@ -25,6 +25,11 @@ const questions = [
   },
   {
     type: "input",
+    message: "Contributors",
+    name: "Contributor",
+  },
+  {
+    type: "input",
     message: "Test Instructions",
     name: "test",
   },
