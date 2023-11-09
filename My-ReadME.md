@@ -1,8 +1,8 @@
 
-  ## Weather Dashboard    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]  
+  ## lsdfkgnl;dsfgkl    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]  
   
   ## Description
-  displays 5 day forcast for inputted cities and saves the data using local storage
+  kjdlfg;lkjsdfg
   
   ## Table of Contents
   - [Installation](#installation)
@@ -13,14 +13,14 @@
   - [Questions](#questions)
   
   ## Installation
-  install weather API by downloading from website
+  ldfskgl;dsfk
   
   ## Usage
-  display humidity, temperature, and wind for 5 days
+  lfkldgjl'sdfkg
   
   ## License
   This project is licensed under the MIT license.
-    
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
   
   ## Contributing
   undefined
@@ -29,5 +29,5 @@
   undefined
   
   ## Questions
-  My email [lindsgree@gmail.com](mailto:lindsgree@gmail.com). You can also find me on [GitHub](https://github.com/lindsayagreen).
+  My email [ldfkgjlklfdkjg](mailto:ldfkgjlklfdkjg). You can also find me on [GitHub](https://github.com/dkfjglsdkf).
   

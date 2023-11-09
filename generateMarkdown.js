@@ -65,7 +65,7 @@ function generateMarkdown(data) {
   
   ## License
   This project is licensed under the ${data.license} license.
-  ${renderLicenseSection(data.license)}  
+${renderLicenseSection(data.license)}  
   
   ## Contributing
   ${data.contributing}
