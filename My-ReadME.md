@@ -1,8 +1,8 @@
 
-  ## lsdfkgnl;dsfgkl    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]  
+  ## Cats    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]  
   
   ## Description
-  kjdlfg;lkjsdfg
+  all about cats
   
   ## Table of Contents
   - [Installation](#installation)
@@ -13,10 +13,10 @@
   - [Questions](#questions)
   
   ## Installation
-  ldfskgl;dsfk
+  install node.js and inquirer
   
   ## Usage
-  lfkldgjl'sdfkg
+  used for all types of platforms
   
   ## License
   This project is licensed under the MIT license.
@@ -29,5 +29,5 @@
   undefined
   
   ## Questions
-  My email [ldfkgjlklfdkjg](mailto:ldfkgjlklfdkjg). You can also find me on [GitHub](https://github.com/dkfjglsdkf).
+  My email [lindsgree@gmail.com](mailto:lindsgree@gmail.com). You can also find me on [GitHub](https://github.com/lindsayagreen).
   

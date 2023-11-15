@@ -27,3 +27,7 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 
 ## Image 
+![image](https://github.com/Lindsayagreen/professional-README-generator/assets/142925597/509fd125-9212-4199-9166-e4056fcd8c47)
+
+## Link 
+ https://lindsayagreen.github.io/professional-README-generator/
